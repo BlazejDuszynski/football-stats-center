@@ -1,0 +1,28 @@
+.navbar {
+    position: absolute;
+    color: rgb(208, 225, 255);
+    width: 20%;
+    left: 50%;
+    top: 3%;
+    transform: translateX(-50%);
+    font-size: 1.1em;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.navbar li {
+    padding: 10px;
+}
+
+.navbar .active {
+    border-bottom: 3px solid rgb(208, 225, 255);
+    ;
+}
