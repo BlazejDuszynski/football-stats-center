@@ -1,0 +1,44 @@
+.content {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.mainHeader, .secondaryHeader {
+    background-color: inherit;
+    margin-bottom: 0;
+}
+
+.mainHeader {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: rgb(208, 225, 255);
+}
+
+.secondaryHeader {
+    font-size: 1.2em;
+    line-height: 150%;
+    color: rgb(172, 202, 255);
+    font-style: italic;
+}
+
+.getStartedButton {
+    cursor: pointer;
+    align-self: center;
+    width: 25%;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-family: "lato" sans-serif;
+    font-size: 1.1em;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+    border: none;
+    border-radius: 20px;
+    color: rgb(208, 225, 255);
+}

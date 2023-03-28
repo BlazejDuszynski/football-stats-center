@@ -4,5 +4,5 @@ body {
   position: relative;
   background-image: linear-gradient(rgba(1, 18, 63, 0.65) 0%, rgba(1, 18, 63, 0.9) 20%, rgba(1, 18, 63, 0.9) 80%, rgba(1, 18, 63, 0.65) 100%), url(/src/images/CR7_wallpaper.jpg);
   background-size: cover;
-
+  font-family: 'Archivo', sans-serif;
 }
