@@ -1,7 +1,8 @@
 import "./App.css";
-import Navbar from "./Components/Main/Navbar";
+import Navbar from "./Components/General/Navbar";
 
 function App() {
+  console.log(window.location);
   return (
     <div className="App">
       <Navbar />
