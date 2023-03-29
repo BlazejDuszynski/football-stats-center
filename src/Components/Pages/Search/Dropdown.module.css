@@ -1,0 +1,86 @@
+.dropdown {
+    width: 50%;
+    position: relative;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    min-width: 30%;
+}
+
+.select:hover {
+    background-color: rgb(143, 143, 143);
+}
+
+.selection {
+    background-color: inherit;
+}
+
+.arrowIcon {
+    background-color: inherit;
+}
+
+.arrowIconRotated {
+    background-color: inherit;
+    transform: rotate(180deg);
+}
+
+.menu {
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu__active {
+    opacity: 1;
+    display: block;
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background-color: grey;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 2;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.button {
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

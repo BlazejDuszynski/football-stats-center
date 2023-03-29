@@ -6,3 +6,7 @@ body {
   background-size: cover;
   font-family: 'Archivo', sans-serif;
 }
+
+:root {
+  --primary: rgb(208, 225, 255)
+}

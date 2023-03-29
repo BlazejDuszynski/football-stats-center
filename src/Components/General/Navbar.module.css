@@ -1,6 +1,6 @@
 .navbar {
     position: absolute;
-    color: rgb(208, 225, 255);
+    color: var(--primary);
     width: 40%;
     left: 50%;
     top: 3%;

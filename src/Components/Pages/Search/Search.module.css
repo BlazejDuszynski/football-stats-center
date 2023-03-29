@@ -1,0 +1,8 @@
+.searchContainer {
+    color: var(--primary);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 40px;
+}
