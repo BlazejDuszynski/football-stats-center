@@ -1,17 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import classes from "./Dropdown.module.css";
 import DropdownItem from "./DropdownItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import LeagueContext from "../../Source/league-context";
 
 function Dropdown() {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
-  const leagues = [
-    "Premier League",
-    "La Liga",
-    "Bundesliga",
-    "Serie A",
-    "Ligue 1",
-  ];
+  const leagueCtx = useContext(LeagueContext);
 
   const toggleDropdown = () => {
     setIsDropdownActive(!isDropdownActive);
@@ -21,14 +16,19 @@ function Dropdown() {
     <div className={classes.dropdownContainer}>
       <div className={classes.dropdown}>
         <div className={classes.select} onClick={toggleDropdown}>
-          <span className={classes.selection}>aaaa</span>
+          <span className={classes.selection}>{leagueCtx.league}</span>
           <ArrowDropDownIcon
             className={isDropdownActive && classes.arrowIconRotated}
           />
         </div>
         <ul className={isDropdownActive ? classes.menu__active : classes.menu}>
-          {leagues.map((league) => {
-            return <DropdownItem name={league} />;
+          {leagueCtx.availableLeagues.map((league) => {
+            return (
+              <DropdownItem
+                name={league}
+                onClick={leagueCtx.selectLeagueHandler}
+              />
+            );
           })}
         </ul>
       </div>
