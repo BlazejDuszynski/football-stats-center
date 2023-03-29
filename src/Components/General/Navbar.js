@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 function Navbar() {
   return (
     <nav className={classes.navbar}>
       <ul>
-        <a href="/">
+        <Link to="/">
           <li className={classes.active}>Home</li>
-        </a>
-        <a href="/Search">
+        </Link>
+        <Link to="/Search">
           <li>Search</li>
-        </a>
-        <a href="/Team">
+        </Link>
+        <Link to="/Team">
           <li>Team</li>
-        </a>
-        <a href="/Player">
+        </Link>
+        <Link to="/Player">
           <li>Player</li>
-        </a>
+        </Link>
       </ul>
     </nav>
   );
