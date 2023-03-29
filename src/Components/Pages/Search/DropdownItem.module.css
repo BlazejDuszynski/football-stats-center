@@ -1,0 +1,18 @@
+.dropdownItem {
+    border-radius: 0.5em;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--dropdown);
+}
+
+.dropdownItem {
+    border-radius: 0.5em;
+    padding: 15px 10px;
+    cursor: pointer;
+    background-color: var(--dropdown);
+}
+
+.dropdownItem:hover {
+    background-color: var(--dropdownHover);
+
+}

@@ -8,5 +8,7 @@ body {
 }
 
 :root {
-  --primary: rgb(208, 225, 255)
+  --primary: rgb(208, 225, 255);
+  --dropdown: rgb(155, 155, 155);
+  --dropdownHover: rgb(146, 146, 146);
 }
