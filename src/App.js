@@ -4,27 +4,20 @@ import Home from "./Components/Pages/Home/Home";
 import Search from "./Components/Pages/Search/Search";
 import Team from "./Components/Pages/Team/Team";
 import Player from "./Components/Pages/Player/Player";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/Search", element: <Search /> },
+  { path: "/Team", element: <Team /> },
+  { path: "/Player", element: <Player /> },
+]);
 
 function App() {
-  let component;
-  console.log(window.location.pathname)
-  switch (window.location.pathname) {
-    case "/":
-      component = <Home />;
-      break;
-    case "/Search":
-      component = <Search />;
-      break;
-    case "/Team":
-      component = <Team />;
-      break;
-    case "/Player":
-      component = <Player />;
-  }
   return (
     <div className="App">
       <Navbar />
-      {component}
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -9,8 +9,8 @@ function Home() {
           Welcome to football stats center{" "}
         </h1>
         <h2 className={classes.secondaryHeader}>
-          Find the most accurate statistics from TOP 5 european leagues! Find
-          out about teams' or player's high quality stats!
+          Find the most accurate statistics from TOP 5 european leagues! Check
+          out teams' and player's high quality statistics!
         </h2>
         <button className={classes.getStartedButton}>Get started</button>
       </div>
