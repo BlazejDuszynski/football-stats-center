@@ -9,7 +9,7 @@ function LeagueProvider(props) {
     "Serie A",
     "Ligue 1",
   ];
-  const [league, setLeague] = useState("");
+  const [league, setLeague] = useState();
   const selectLeagueHandler = (name) => {
     setLeague(name);
   };

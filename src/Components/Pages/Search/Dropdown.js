@@ -26,7 +26,7 @@ function Dropdown() {
             return (
               <DropdownItem
                 name={league}
-                onClick={leagueCtx.selectLeagueHandler}
+                onChooseLeague={leagueCtx.selectLeague}
                 onToggleDropdown={toggleDropdown}
               />
             );

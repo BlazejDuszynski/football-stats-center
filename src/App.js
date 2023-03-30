@@ -6,6 +6,7 @@ import Team from "./Components/Pages/Team/Team";
 import Player from "./Components/Pages/Player/Player";
 import RootLayout from "./Components/Pages/RootLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LeagueProvider from "./Components/Source/LeagueProvider";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router}></RouterProvider>
+      <LeagueProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </LeagueProvider>
     </div>
   );
 }

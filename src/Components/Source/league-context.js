@@ -2,7 +2,7 @@ import React from "react";
 
 const LeagueContext = React.createContext({
   selectedLeague: "",
-  selectLeagueHandler: () => {},
+  selectLeague: () => {},
   availableLeagues: [
     "Premier League",
     "La Liga",
