@@ -16,7 +16,7 @@ function Dropdown() {
     <div className={classes.dropdownContainer}>
       <div className={classes.dropdown}>
         <div className={classes.select} onClick={toggleDropdown}>
-          <span className={classes.selection}>{leagueCtx.league}</span>
+          <span className={classes.selection}>{leagueCtx.selectedLeague}</span>
           <ArrowDropDownIcon
             className={isDropdownActive && classes.arrowIconRotated}
           />
@@ -27,6 +27,7 @@ function Dropdown() {
               <DropdownItem
                 name={league}
                 onClick={leagueCtx.selectLeagueHandler}
+                onToggleDropdown={toggleDropdown}
               />
             );
           })}

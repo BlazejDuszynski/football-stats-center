@@ -5,6 +5,7 @@ function DropdownItem(props) {
   const selectLeagueHandler = () => {
     console.log(props.name);
     props.onClick(props.name);
+    props.onToggleDropdown();
   };
 
   return (

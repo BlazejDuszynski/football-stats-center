@@ -9,7 +9,7 @@ function LeagueProvider(props) {
     "Serie A",
     "Ligue 1",
   ];
-  const [league, setLeague] = useState(leagues[0]);
+  const [league, setLeague] = useState("");
   const selectLeagueHandler = (name) => {
     setLeague(name);
   };
@@ -19,6 +19,8 @@ function LeagueProvider(props) {
     selectedLeague: league,
     selectLeague: selectLeagueHandler,
   };
+
+  console.log(league);
 
   return (
     <LeagueContext.Provider value={leagueContext}>
