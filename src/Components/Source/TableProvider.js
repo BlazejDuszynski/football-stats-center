@@ -10,7 +10,8 @@ const TableProvider = (props) => {
         seasonID
     );
     const table = await response.json();
-    console.log(table);
+    console.log(table.data.standings);
+    isFetchedTable(table.data.standings);
   }
 
   const tableContext = {
