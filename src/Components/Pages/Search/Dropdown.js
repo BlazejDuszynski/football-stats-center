@@ -25,7 +25,8 @@ function Dropdown() {
           {leagueCtx.availableLeagues.map((league) => {
             return (
               <DropdownItem
-                name={league}
+                name={league.name}
+                id={league.id}
                 onChooseLeague={leagueCtx.selectLeague}
                 onToggleDropdown={toggleDropdown}
               />
