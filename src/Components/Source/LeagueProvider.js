@@ -7,8 +7,8 @@ function LeagueProvider(props) {
     { name: "Bundesliga", id: 12570 },
   ];
   const [league, setLeague] = useState({});
-  const selectLeagueHandler = (name, id) => {
-    setLeague({ name: name, id: id });
+  const selectLeagueHandler = (league) => {
+    setLeague({ name: league.name, id: league.id });
   };
 
   console.log(league);

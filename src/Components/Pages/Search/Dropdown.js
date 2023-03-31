@@ -33,6 +33,7 @@ function Dropdown() {
           {leagueCtx.availableLeagues.map((league) => {
             return (
               <DropdownItem
+                league={league}
                 name={league.name}
                 key={league.id}
                 id={league.id}
