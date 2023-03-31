@@ -1,0 +1,12 @@
+.tableRow {
+    padding: 10px 0;
+    width: 100%;
+}
+
+.teamName {
+    cursor: pointer;
+}
+
+/* .teamName:hover {
+    border-bottom: 1px solid white;
+} */
