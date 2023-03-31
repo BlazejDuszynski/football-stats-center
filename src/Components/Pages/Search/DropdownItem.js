@@ -9,7 +9,7 @@ function DropdownItem(props) {
 
   return (
     <li className={classes.dropdownItem} onClick={selectLeagueHandler}>
-      {props.name}
+      {props.league.name}
     </li>
   );
 }

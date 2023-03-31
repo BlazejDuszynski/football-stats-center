@@ -7,8 +7,7 @@ const TableProvider = (props) => {
   async function fetchTableHandler(seasonID) {
     const response = await fetch(
       "https://api.soccersapi.com/v2.2/leagues/?user=bduszynski92&token=3742a318b07fbd2d2c34fe25d93b3bbf&t=standings&season_id=" +
-        seasonID +
-        ".json"
+        seasonID
     );
     const table = await response.json();
     console.log(table);
