@@ -3,20 +3,28 @@ import classes from "./Dropdown.module.css";
 import DropdownItem from "./DropdownItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LeagueContext from "../../Source/league-context";
+import TableContext from "../../Source/table-context";
 
 function Dropdown() {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
   const leagueCtx = useContext(LeagueContext);
+  const tableCtx = useContext(TableContext);
 
   const toggleDropdown = () => {
     setIsDropdownActive(!isDropdownActive);
+  };
+
+  const dropdownSubmitHandler = () => {
+    tableCtx.fetchSquad(leagueCtx.selectedLeague.id);
   };
 
   return (
     <div className={classes.dropdownContainer}>
       <div className={classes.dropdown}>
         <div className={classes.select} onClick={toggleDropdown}>
-          <span className={classes.selection}>{leagueCtx.selectedLeague}</span>
+          <span className={classes.selection}>
+            {leagueCtx.selectedLeague.name}
+          </span>
           <ArrowDropDownIcon
             className={isDropdownActive && classes.arrowIconRotated}
           />
@@ -26,6 +34,7 @@ function Dropdown() {
             return (
               <DropdownItem
                 name={league.name}
+                key={league.id}
                 id={league.id}
                 onChooseLeague={leagueCtx.selectLeague}
                 onToggleDropdown={toggleDropdown}
