@@ -1,7 +1,7 @@
 import React from "react";
 
 const LeagueContext = React.createContext({
-  selectedLeague: "",
+  selectedLeague: {},
   selectLeague: () => {},
   availableLeagues: [
     "Premier League",

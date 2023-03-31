@@ -3,8 +3,8 @@ import LeagueContext from "./league-context";
 
 function LeagueProvider(props) {
   const leagues = [
-    { name: "Premier League", id: 583 },
-    { name: "Bundesliga", id: 594 },
+    { name: "Premier League", id: 12516 },
+    { name: "Bundesliga", id: 12570 },
   ];
   const [league, setLeague] = useState();
   const selectLeagueHandler = (name) => {
@@ -16,8 +16,6 @@ function LeagueProvider(props) {
     selectedLeague: league,
     selectLeague: selectLeagueHandler,
   };
-
-  console.log(league);
 
   return (
     <LeagueContext.Provider value={leagueContext}>

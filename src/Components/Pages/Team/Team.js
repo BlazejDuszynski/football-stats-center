@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Team() {
+const Team = () => {
     return (
         <div>
             
         </div>
     );
-}
+};
 
 export default Team;
