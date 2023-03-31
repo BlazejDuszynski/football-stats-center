@@ -7,8 +7,20 @@
     /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     padding: 20px 40px;
     margin: 70px 0;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.teamName {
+    text-align: left;
 }
 
 .table {
     width: 100%;
+}
+
+.teamHeader {
+    text-align: left;
+    padding: 0 10px;
+    text-transform: uppercase;
 }

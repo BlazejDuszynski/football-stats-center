@@ -1,10 +1,18 @@
-.tableRow {
-    padding: 10px 0;
-    width: 100%;
+th {
+    padding: 5px 0;
+}
+
+td {
+    padding: 15px 0;
+}
+
+.centeredData {
+    text-align: center;
 }
 
 .teamName {
     cursor: pointer;
+    padding: 0 10px;
 }
 
 /* .teamName:hover {

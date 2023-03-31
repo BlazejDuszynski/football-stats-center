@@ -8,7 +8,7 @@ const Table = ({ table }) => {
       <table className={classes.table}>
         <tr>
           <th>#</th>
-          <th>Team</th>
+          <th className={classes.teamHeader}>Team</th>
           <th>MP</th>
           <th>W</th>
           <th>D</th>
