@@ -1,7 +1,7 @@
 import React from "react";
 
 const TableContext = React.createContext({
-  fetchSquad: () => {},
+  fetchTable: () => {},
   squad: [],
 });
 

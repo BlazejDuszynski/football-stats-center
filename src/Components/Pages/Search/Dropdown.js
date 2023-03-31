@@ -8,14 +8,16 @@ import TableContext from "../../Source/table-context";
 function Dropdown() {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
   const leagueCtx = useContext(LeagueContext);
-  const tableCtx = useContext(TableContext);
+  const { fetchTable } = useContext(TableContext);
 
   const toggleDropdown = () => {
     setIsDropdownActive(!isDropdownActive);
   };
 
+  console.log(leagueCtx.selectedLeague.id);
+
   const dropdownSubmitHandler = () => {
-    tableCtx.fetchSquad(leagueCtx.selectedLeague.id);
+    fetchTable(leagueCtx.selectedLeague.id);
   };
 
   return (
@@ -44,7 +46,9 @@ function Dropdown() {
           })}
         </ul>
       </div>
-      <button className={classes.button}>Search</button>
+      <button className={classes.button} onClick={dropdownSubmitHandler}>
+        Search
+      </button>
     </div>
   );
 }
