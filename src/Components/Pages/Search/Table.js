@@ -20,6 +20,7 @@ const Table = ({ table }) => {
         {table.map((item) => {
           return (
             <TableItem
+              id={item.team_id}
               name={item.team_name}
               position={item.overall.position}
               games={item.overall.games_played}
