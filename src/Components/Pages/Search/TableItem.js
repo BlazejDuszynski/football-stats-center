@@ -1,12 +1,23 @@
 import React from "react";
 import classes from "./TableItem.module.css";
+import { NavLink } from "react-router-dom";
+import { textAlign } from "@mui/system";
 
 const TableItem = (props) => {
   return (
     <tr className={classes.tableRow}>
       <td className={classes.centeredData}>{props.position + "."}</td>
       <td className={classes.teamName}>
-        <p className={classes.teamName__text}>{props.name}</p>
+        <NavLink
+          to="/Team"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+          }}
+          end
+        >
+          <p className={classes.teamName__text}>{props.name}</p>
+        </NavLink>
       </td>
       <td className={classes.centeredData}>{props.games}</td>
       <td className={classes.centeredData}>{props.won}</td>
