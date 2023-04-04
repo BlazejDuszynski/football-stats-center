@@ -23,6 +23,7 @@
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.1s ease-in-out;
+    color: #0e1c3d;
 }
 
 .select:hover {
@@ -81,7 +82,6 @@
 
 .button:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }

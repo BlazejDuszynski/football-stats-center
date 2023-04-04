@@ -3,6 +3,7 @@
     padding: 10px;
     cursor: pointer;
     background-color: var(--dropdown);
+    color: #0e1c3d;
 }
 
 .dropdownItem {

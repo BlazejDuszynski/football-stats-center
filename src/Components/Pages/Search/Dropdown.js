@@ -36,8 +36,6 @@ function Dropdown() {
             return (
               <DropdownItem
                 league={league}
-                // name={league.name}
-                // key={league.id}
                 id={league.id}
                 onChooseLeague={leagueCtx.selectLeague}
                 onToggleDropdown={toggleDropdown}
