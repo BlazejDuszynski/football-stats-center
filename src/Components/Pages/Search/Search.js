@@ -10,7 +10,7 @@ function Search() {
 
   return (
     <div className={classes.searchContainer}>
-      <h2>
+      <h2 className={classes.header}>
         Choose league from the list below and check out the current table!
       </h2>
       <Dropdown />

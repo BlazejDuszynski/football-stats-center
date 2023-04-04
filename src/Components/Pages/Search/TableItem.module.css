@@ -31,3 +31,7 @@ td {
     width: 100%;
     z-index: 100;
 }
+
+/* .tableRow:nth-child(even) {
+    background-color: rgb(16, 80, 139);
+} */

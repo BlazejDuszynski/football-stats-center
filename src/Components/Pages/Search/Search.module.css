@@ -6,3 +6,8 @@
     transform: translateX(-50%);
     gap: 40px;
 }
+
+.header {
+    font-size: 1.5em;
+    text-align: center;
+}
