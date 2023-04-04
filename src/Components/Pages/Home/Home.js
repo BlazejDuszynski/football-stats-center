@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Home.module.css";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -12,7 +13,9 @@ function Home() {
           Find the most accurate statistics from TOP 5 european leagues! Check
           out teams' and player's high quality statistics!
         </h2>
-        <button className={classes.getStartedButton}>Get started</button>
+        <NavLink to="/Search" end>
+          <button className={classes.getStartedButton}>Get started</button>
+        </NavLink>
       </div>
     </div>
   );
