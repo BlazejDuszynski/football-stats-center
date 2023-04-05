@@ -5,19 +5,6 @@ import TeamContext from "../../Source/team-context";
 
 const TableItem = (props) => {
   const teamCtx = useContext(TeamContext);
-  const [team, setTeam] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // const selectTeamHandler = () => {
-  //   setIsLoading(true);
-  //   fetchTeamDataHandler();
-  // };
-
-  // const fetchTeamDataHandler = async () => {
-  //   const fetchedData = await teamCtx.selectTeam(props.id);
-  //   setTeam(fetchedData);
-  //   setIsLoading(false);
-  // };
 
   const selectTeamIDHandler = () => {
     teamCtx.selectTeamID(props.id);
