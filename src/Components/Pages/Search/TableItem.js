@@ -1,19 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./TableItem.module.css";
 import { NavLink } from "react-router-dom";
 import TeamContext from "../../Source/team-context";
 
 const TableItem = (props) => {
   const teamCtx = useContext(TeamContext);
+  const [team, setTeam] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
   const selectTeamHandler = () => {
-    teamCtx.selectTeam(props.id)
-  }
+    setIsLoading(true);
+    fetchTeamDataHandler();
+  };
+
+  const fetchTeamDataHandler = async () => {
+    const fetchedData = await teamCtx.selectTeam(props.id);
+    console.log(fetchedData);
+    setTeam(fetchedData);
+    setIsLoading(false);
+  };
 
   return (
     <tr className={classes.tableRow}>
       <td className={classes.centeredData}>{props.position + "."}</td>
       <td className={classes.teamName}>
-        <NavLink
+        {/* <NavLink
           to="/Team"
           style={{
             textDecoration: "none",
@@ -21,10 +32,10 @@ const TableItem = (props) => {
           }}
           end
         >
-          <p className={classes.teamName__text} onClick={selectTeamHandler}>
-            {props.name}
-          </p>
-        </NavLink>
+        </NavLink> */}
+        <p className={classes.teamName__text} onClick={selectTeamHandler}>
+          {props.name}
+        </p>
       </td>
       <td className={classes.centeredData}>{props.games}</td>
       <td className={classes.centeredData}>{props.won}</td>
