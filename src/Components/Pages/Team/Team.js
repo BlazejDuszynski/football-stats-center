@@ -1,6 +1,7 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import TeamContext from "../../Source/team-context";
 import classes from "./Team.module.css";
+import TeamContainer from "./TeamContainer";
 
 const Team = () => {
   const teamCtx = useContext(TeamContext);
@@ -25,7 +26,7 @@ const Team = () => {
       {teamData === null || teamData.data.length === 0 ? (
         <p className={classes.initialScreen}>No data selected...</p>
       ) : (
-        <p>data here</p>
+        <TeamContainer />
       )}
       {isLoading && <p className={classes.loadingContent}>Loading...</p>}
     </Fragment>
