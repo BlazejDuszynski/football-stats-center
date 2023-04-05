@@ -14,6 +14,7 @@
     left: 50%;
     transform: translateX(-50%);
     color: var(--primary);
+    font-family: 'Alkatra', cursive;
 }
 
 .header {
