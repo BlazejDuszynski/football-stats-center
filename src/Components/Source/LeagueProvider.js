@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LeagueContext from "./league-context";
 
-function LeagueProvider(props) {
+function LeagueProvider({ children }) {
   const leagues = [
     { name: "Premier League", id: 12516 },
     { name: "Bundesliga", id: 12570 },
@@ -21,7 +21,7 @@ function LeagueProvider(props) {
 
   return (
     <LeagueContext.Provider value={leagueContext}>
-      {props.children}
+      {children}
     </LeagueContext.Provider>
   );
 }

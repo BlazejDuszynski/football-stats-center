@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TeamContext from "./team-context";
 
-const TeamProvider = (props) => {
+const TeamProvider = ({ children }) => {
   const [selectedTeam, setSelectedTeam] = useState([]);
 
   async function selectTeamHandler(id) {
@@ -11,6 +11,14 @@ const TeamProvider = (props) => {
     );
     const teamData = await response.json();
     console.log(teamData);
+    setSelectedTeam({
+      name: teamData.name,
+      country: teamData.country,
+      founded: teamData.founded,
+      logo: teamData.img,
+      coachID: teamData.coach_id,
+      venueID: teamData.venue_id,
+    });
   }
 
   const teamContext = {
@@ -19,9 +27,7 @@ const TeamProvider = (props) => {
   };
 
   return (
-    <TeamContext.Provider value={teamContext}>
-      {props.children}
-    </TeamContext.Provider>
+    <TeamContext.Provider value={teamContext}>{children}</TeamContext.Provider>
   );
 };
 
