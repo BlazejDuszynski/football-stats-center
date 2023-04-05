@@ -31,8 +31,6 @@ const TeamProvider = ({ children }) => {
     fetchTeamData();
   }, []);
 
-  console.log(teamID);
-
   const teamContext = {
     selectTeam: fetchTeamData,
     team: selectedTeam,

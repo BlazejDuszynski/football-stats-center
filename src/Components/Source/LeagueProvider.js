@@ -11,8 +11,6 @@ function LeagueProvider({ children }) {
     setLeague({ name: league.name, id: league.id });
   };
 
-  console.log(league);
-
   const leagueContext = {
     availableLeagues: leagues,
     selectedLeague: league,
