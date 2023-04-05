@@ -14,3 +14,24 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+.loadingContent {
+    z-index: 1000;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.initialScreen {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    justify-items: center;
+    color: var(--primary);
+    font-size: 1.2em;
+}

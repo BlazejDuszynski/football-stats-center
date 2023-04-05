@@ -22,13 +22,12 @@ const Team = () => {
 
   return (
     <Fragment>
-      {isLoading ? (
-        <p>Loading...</p>
+      {teamData === null || teamData.data.length === 0 ? (
+        <p className={classes.initialScreen}>No data selected...</p>
       ) : (
-        <div className={classes.teamContainer}>
-          <p></p>
-        </div>
+        <p>data here</p>
       )}
+      {isLoading && <p className={classes.loadingContent}>Loading...</p>}
     </Fragment>
   );
 };
