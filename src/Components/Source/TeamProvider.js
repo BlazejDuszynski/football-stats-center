@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import TeamContext from "./team-context";
 
 const TeamProvider = ({ children }) => {
-  const [selectedTeam, setSelectedTeam] = useState([]);
   const [teamID, setTeamID] = useState(null);
 
   const fetchTeamData = async (id) => {
@@ -11,15 +10,6 @@ const TeamProvider = ({ children }) => {
         id
     );
     const teamData = await response.json();
-    setSelectedTeam({
-      key: teamData.id,
-      name: teamData.name,
-      country: teamData.country,
-      founded: teamData.founded,
-      logo: teamData.img,
-      coachID: teamData.coach_id,
-      venueID: teamData.venue_id,
-    });
     return teamData;
   };
 
@@ -33,7 +23,6 @@ const TeamProvider = ({ children }) => {
 
   const teamContext = {
     selectTeam: fetchTeamData,
-    team: selectedTeam,
     selectTeamID: selectTeamIDHandler,
     teamID: teamID,
   };

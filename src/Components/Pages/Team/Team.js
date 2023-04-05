@@ -26,7 +26,15 @@ const Team = () => {
       {teamData === null || teamData.data.length === 0 ? (
         <p className={classes.initialScreen}>No data selected...</p>
       ) : (
-        <TeamContainer />
+        <TeamContainer
+          key={teamData.id}
+          name={teamData.name}
+          country={teamData.country}
+          founded={teamData.founded}
+          logo={teamData.img}
+          coachID={teamData.coach_id}
+          venueID={teamData.venue_id}
+        />
       )}
       {isLoading && <p className={classes.loadingContent}>Loading...</p>}
     </Fragment>
