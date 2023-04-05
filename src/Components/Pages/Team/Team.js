@@ -27,13 +27,13 @@ const Team = () => {
         <p className={classes.initialScreen}>No data selected...</p>
       ) : (
         <TeamContainer
-          key={teamData.id}
-          name={teamData.name}
-          country={teamData.country}
-          founded={teamData.founded}
-          logo={teamData.img}
-          coachID={teamData.coach_id}
-          venueID={teamData.venue_id}
+          key={teamData.data.id}
+          name={teamData.data.name}
+          country={teamData.data.country.name}
+          founded={teamData.data.founded}
+          logo={teamData.data.img}
+          coachID={teamData.data.coach_id}
+          venueID={teamData.data.venue_id}
         />
       )}
       {isLoading && <p className={classes.loadingContent}>Loading...</p>}

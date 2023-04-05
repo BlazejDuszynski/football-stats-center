@@ -13,4 +13,25 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--primary);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    border-bottom: 1px solid white;
+}
+
+.headerIntro {
+    display: flex;
+    gap: 20px;
+}
+
+.clubIntro {
+    padding: 30px 0;
+}
+
+.clubName {
+    font-size: 1.2em;
 }
