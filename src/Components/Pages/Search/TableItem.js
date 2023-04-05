@@ -8,23 +8,26 @@ const TableItem = (props) => {
   const [team, setTeam] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const selectTeamHandler = () => {
-    setIsLoading(true);
-    fetchTeamDataHandler();
-  };
+  // const selectTeamHandler = () => {
+  //   setIsLoading(true);
+  //   fetchTeamDataHandler();
+  // };
 
-  const fetchTeamDataHandler = async () => {
-    const fetchedData = await teamCtx.selectTeam(props.id);
-    console.log(fetchedData);
-    setTeam(fetchedData);
-    setIsLoading(false);
+  // const fetchTeamDataHandler = async () => {
+  //   const fetchedData = await teamCtx.selectTeam(props.id);
+  //   setTeam(fetchedData);
+  //   setIsLoading(false);
+  // };
+
+  const selectTeamIDHandler = () => {
+    teamCtx.selectTeamID(props.id);
   };
 
   return (
     <tr className={classes.tableRow}>
       <td className={classes.centeredData}>{props.position + "."}</td>
       <td className={classes.teamName}>
-        {/* <NavLink
+        <NavLink
           to="/Team"
           style={{
             textDecoration: "none",
@@ -32,10 +35,10 @@ const TableItem = (props) => {
           }}
           end
         >
-        </NavLink> */}
-        <p className={classes.teamName__text} onClick={selectTeamHandler}>
-          {props.name}
-        </p>
+          <p className={classes.teamName__text} onClick={selectTeamIDHandler}>
+            {props.name}
+          </p>
+        </NavLink>
       </td>
       <td className={classes.centeredData}>{props.games}</td>
       <td className={classes.centeredData}>{props.won}</td>

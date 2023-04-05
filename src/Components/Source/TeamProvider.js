@@ -3,6 +3,7 @@ import TeamContext from "./team-context";
 
 const TeamProvider = ({ children }) => {
   const [selectedTeam, setSelectedTeam] = useState([]);
+  const [teamID, setTeamID] = useState(null);
 
   const fetchTeamData = async (id) => {
     const response = await fetch(
@@ -22,13 +23,21 @@ const TeamProvider = ({ children }) => {
     return teamData;
   };
 
+  const selectTeamIDHandler = (id) => {
+    setTeamID(id);
+  };
+
   useEffect(() => {
     fetchTeamData();
   }, []);
 
+  console.log(teamID);
+
   const teamContext = {
     selectTeam: fetchTeamData,
     team: selectedTeam,
+    selectTeamID: selectTeamIDHandler,
+    teamID: teamID,
   };
 
   return (

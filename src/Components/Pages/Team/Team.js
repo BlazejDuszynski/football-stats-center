@@ -1,15 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import TeamContext from "../../Source/team-context";
 import classes from "./Team.module.css";
 
 const Team = () => {
-  const { team } = useContext(TeamContext);
+  const teamCtx = useContext(TeamContext);
+  const [teamData, setTeamData] = useState(null);
 
-  console.log(team);
+  const fetchTeamDataHandler = async () => {
+    const fetchedData = await teamCtx.selectTeam(teamCtx.teamID);
+    setTeamData(fetchedData);
+  };
+
+  useEffect(() => {
+    fetchTeamDataHandler();
+  }, [teamCtx.teamID]);
+
+  console.log(teamData);
 
   return (
     <div className={classes.teamContainer}>
-      <p>{team.name}</p>
+      <p></p>
     </div>
   );
 };
