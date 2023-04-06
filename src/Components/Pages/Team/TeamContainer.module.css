@@ -4,7 +4,6 @@
     backdrop-filter: blur(15.5px);
     -webkit-backdrop-filter: blur(15.5px);
     border-radius: 10px;
-    padding: 20px 40px;
     margin: 70px 0;
     height: 80vh;
     overflow-y: scroll;
@@ -31,11 +30,15 @@
 }
 
 .header {
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     height: 150px;
-    border-bottom: 1px solid white;
     padding: 0px 20px;
+    background: rgba(17, 25, 51, 0.24);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20.5px);
+    -webkit-backdrop-filter: blur(15.5px);
 }
 
 .clubIntro {
