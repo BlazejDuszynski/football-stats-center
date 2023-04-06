@@ -5,7 +5,7 @@ import SquadItem from "./SquadItem";
 const Squad = ({ squad }) => {
 //   const sortedSquad = squad.reduce((a, b) => +a.number - +b.number);
 
-//   console.log(sortedSquad);
+  console.log(squad);
 
   return (
     <div className={classes.squadContainer}>

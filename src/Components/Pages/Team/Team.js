@@ -10,33 +10,32 @@ const Team = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchTeamDataHandler = async () => {
-    setIsLoading(true);
     const fetchedData = await teamCtx.selectTeam(teamCtx.teamID);
     setTeamData(fetchedData);
-    setIsLoading(false);
   };
 
   const fetchSquadDataHandler = async () => {
-    setIsLoading(true);
     const fetchedSquadData = await teamCtx.selectSquad(teamCtx.teamID);
     setSquadData(fetchedSquadData);
-    setIsLoading(false);
   };
 
   useEffect(() => {
+    setIsLoading(true);
     fetchTeamDataHandler();
+    fetchSquadDataHandler();
+    setIsLoading(false);
   }, [teamCtx.teamID]);
 
-  useEffect(() => {
-    fetchSquadDataHandler();
-  }, [teamCtx.teamID]);
+  // useEffect(() => {
+
+  // }, [teamCtx.teamID]);
 
   console.log(teamData);
   console.log(squadData);
 
   return (
     <Fragment>
-      {teamData === null || teamData.data.length === 0 ? (
+      {teamData === null || squadData === null || teamData.data.length === 0 ? (
         <p className={classes.initialScreen}>No data selected...</p>
       ) : (
         <TeamContainer
@@ -47,6 +46,7 @@ const Team = () => {
           logo={teamData.data.img}
           coachID={teamData.data.coach_id}
           venueID={teamData.data.venue_id}
+          squad={squadData.data.squad}
         />
       )}
       {isLoading && <p className={classes.loadingContent}>Loading...</p>}
