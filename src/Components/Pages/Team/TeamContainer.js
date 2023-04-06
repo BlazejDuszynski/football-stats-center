@@ -23,7 +23,7 @@ const TeamContainer = (props) => {
       </header>
       {/* stats container */}
       <div className={classes.statsContainer}>
-        <Squad />
+        <Squad squad={props.squad} />
         <div>Another sections</div>
       </div>
     </div>

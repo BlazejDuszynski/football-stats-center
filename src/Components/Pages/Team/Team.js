@@ -47,7 +47,6 @@ const Team = () => {
           logo={teamData.data.img}
           coachID={teamData.data.coach_id}
           venueID={teamData.data.venue_id}
-          squad={squadData.data.squad}
         />
       )}
       {isLoading && <p className={classes.loadingContent}>Loading...</p>}

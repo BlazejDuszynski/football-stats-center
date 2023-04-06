@@ -1,7 +1,12 @@
 import React from "react";
 import classes from "./Squad.module.css";
+import SquadItem from "./SquadItem";
 
-const Squad = () => {
+const Squad = ({ squad }) => {
+//   const sortedSquad = squad.reduce((a, b) => +a.number - +b.number);
+
+//   console.log(sortedSquad);
+
   return (
     <div className={classes.squadContainer}>
       <table className={classes.tableContent}>
@@ -15,6 +20,9 @@ const Squad = () => {
             <td>Height</td>
           </tr>
         </thead>
+        <tbody>
+          <SquadItem />
+        </tbody>
       </table>
     </div>
   );
