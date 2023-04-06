@@ -35,7 +35,12 @@ const Team = () => {
 
   return (
     <Fragment>
-      {teamData === null || squadData === null || teamData.data.length === 0 ? (
+      {teamData === null ||
+      squadData === null ||
+      squadData.data === undefined ||
+      teamData.data === undefined ||
+      squadData.data.length === 0 ||
+      teamData.data.length === 0 ? (
         <p className={classes.initialScreen}>No data selected...</p>
       ) : (
         <TeamContainer
