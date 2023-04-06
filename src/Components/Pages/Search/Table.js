@@ -1,7 +1,6 @@
 import React from "react";
 import TableItem from "./TableItem";
 import classes from "./Table.module.css";
-import { NavLink } from "react-router-dom";
 
 const Table = ({ table }) => {
   return (
