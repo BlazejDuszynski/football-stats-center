@@ -17,8 +17,8 @@ const TeamContainer = (props) => {
         </div>
         <div className={classes.headerItemsContainer}>
           <HeaderItem label="coach" data="Erik ten Hag" />
-          <HeaderItem label="founded" data={props.founded} />
           <HeaderItem label="stadium" data="Staint Mary's Stadium" />
+          <HeaderItem label="founded" data={props.founded} />
         </div>
       </header>
       {/* stats container */}
