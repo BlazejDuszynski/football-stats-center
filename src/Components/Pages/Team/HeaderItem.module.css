@@ -1,0 +1,27 @@
+.headerItem {
+    place-self: center stretch;
+    text-align: center;
+    margin: 0 auto;
+    min-width: 150px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+}
+
+.label {
+    color: #9a96d3;
+    font-size: 0.7em;
+    align-self: center;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    background-color: inherit;
+}
+
+.content {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 10px;
+    background-color: inherit;
+}

@@ -13,8 +13,21 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--primary);
+    color: whitesmoke;
     font-family: 'Alkatra', cursive;
+}
+
+.headerIntro {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 40%;
+    padding: 0 10px;
+}
+
+.logo {
+    width: 120px;
+    padding: 20px 0;
 }
 
 .header {
@@ -22,11 +35,7 @@
     align-items: center;
     height: 150px;
     border-bottom: 1px solid white;
-}
-
-.headerIntro {
-    display: flex;
-    gap: 20px;
+    padding: 0px 20px;
 }
 
 .clubIntro {
@@ -35,4 +44,13 @@
 
 .clubName {
     font-size: 1.2em;
+}
+
+.headerItemsContainer {
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    justify-content: space-around;
+    gap: 60px;
 }
