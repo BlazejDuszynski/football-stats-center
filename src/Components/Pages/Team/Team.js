@@ -6,6 +6,7 @@ import TeamContainer from "./TeamContainer";
 const Team = () => {
   const teamCtx = useContext(TeamContext);
   const [teamData, setTeamData] = useState(null);
+  const [squadData, setSquadData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchTeamDataHandler = async () => {
@@ -15,11 +16,18 @@ const Team = () => {
     setIsLoading(false);
   };
 
+  const fetchSquadDataHandler = async () => {
+    const fetchedSquadData = await teamCtx.selectSquad(teamCtx.teamID);
+    setSquadData(fetchedSquadData);
+  };
+
   useEffect(() => {
     fetchTeamDataHandler();
+    fetchSquadDataHandler();
   }, [teamCtx.teamID]);
 
   console.log(teamData);
+  console.log(squadData);
 
   return (
     <Fragment>

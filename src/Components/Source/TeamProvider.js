@@ -17,14 +17,25 @@ const TeamProvider = ({ children }) => {
     setTeamID(id);
   };
 
+  const fetchSquadHandler = async (id) => {
+    const response = await fetch(
+      "https://api.soccersapi.com/v2.2/teams/?user=bduszynski92&token=3742a318b07fbd2d2c34fe25d93b3bbf&t=squad&id=" +
+        id
+    );
+    const squadData = await response.json();
+    return squadData;
+  };
+
   useEffect(() => {
     fetchTeamData();
+    fetchSquadHandler();
   }, []);
 
   const teamContext = {
     selectTeam: fetchTeamData,
     selectTeamID: selectTeamIDHandler,
     teamID: teamID,
+    selectSquad: fetchSquadHandler,
   };
 
   return (

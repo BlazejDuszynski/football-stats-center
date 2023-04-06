@@ -9,10 +9,10 @@ const Squad = () => {
           <tr>
             <td>Number</td>
             <td>Player</td>
+            <td>Nationality</td>
             <td>Position</td>
             <td>Age</td>
             <td>Height</td>
-            <td>Joined</td>
           </tr>
         </thead>
       </table>
