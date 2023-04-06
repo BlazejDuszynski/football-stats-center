@@ -57,3 +57,10 @@
     justify-content: space-around;
     gap: 60px;
 }
+
+.statsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}

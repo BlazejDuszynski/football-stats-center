@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderItem from "./HeaderItem";
+import Squad from "./Squad";
 import classes from "./TeamContainer.module.css";
 
 const TeamContainer = (props) => {
@@ -15,13 +16,16 @@ const TeamContainer = (props) => {
           </div>
         </div>
         <div className={classes.headerItemsContainer}>
-          <HeaderItem label="coach" data="Erik ten Hag"/>
+          <HeaderItem label="coach" data="Erik ten Hag" />
           <HeaderItem label="founded" data={props.founded} />
-          <HeaderItem label="stadium" data="Staint Mary's Stadium"/>
+          <HeaderItem label="stadium" data="Staint Mary's Stadium" />
         </div>
       </header>
       {/* stats container */}
-      <div></div>
+      <div className={classes.statsContainer}>
+        <Squad />
+        <div>Another sections</div>
+      </div>
     </div>
   );
 };

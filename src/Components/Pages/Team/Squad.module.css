@@ -1,0 +1,22 @@
+.squadContainer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    width: 90%;
+}
+
+.tableContent {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableContent thead tr {
+    background: rgba(17, 25, 51, 0.24);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20.5px);
+    -webkit-backdrop-filter: blur(15.5px);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+}
