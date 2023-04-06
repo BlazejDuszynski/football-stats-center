@@ -17,12 +17,17 @@ const Team = () => {
   };
 
   const fetchSquadDataHandler = async () => {
+    setIsLoading(true);
     const fetchedSquadData = await teamCtx.selectSquad(teamCtx.teamID);
     setSquadData(fetchedSquadData);
+    setIsLoading(false);
   };
 
   useEffect(() => {
     fetchTeamDataHandler();
+  }, [teamCtx.teamID]);
+
+  useEffect(() => {
     fetchSquadDataHandler();
   }, [teamCtx.teamID]);
 
@@ -42,6 +47,7 @@ const Team = () => {
           logo={teamData.data.img}
           coachID={teamData.data.coach_id}
           venueID={teamData.data.venue_id}
+          squad={squadData.data.squad}
         />
       )}
       {isLoading && <p className={classes.loadingContent}>Loading...</p>}
