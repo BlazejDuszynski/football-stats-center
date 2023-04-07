@@ -1,10 +1,10 @@
 import React from "react";
 import HeaderItem from "./HeaderItem";
+import MatchesContainer from "./MatchesContainer";
 import Squad from "./Squad";
 import classes from "./TeamContainer.module.css";
 
 const TeamContainer = (props) => {
-
   return (
     <div className={classes.teamContainer}>
       {/* header of team container */}
@@ -25,7 +25,7 @@ const TeamContainer = (props) => {
       {/* stats container */}
       <div className={classes.statsContainer}>
         <Squad squad={props.squad} />
-        <div>Another sections</div>
+        <MatchesContainer />
       </div>
     </div>
   );
