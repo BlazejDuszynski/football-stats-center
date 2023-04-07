@@ -25,7 +25,7 @@ const TeamContainer = (props) => {
       {/* stats container */}
       <div className={classes.statsContainer}>
         <Squad squad={props.squad} />
-        <MatchesContainer />
+        <MatchesContainer matches={props.matches}/>
       </div>
     </div>
   );
