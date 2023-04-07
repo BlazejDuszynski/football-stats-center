@@ -4,6 +4,7 @@ import Squad from "./Squad";
 import classes from "./TeamContainer.module.css";
 
 const TeamContainer = (props) => {
+
   return (
     <div className={classes.teamContainer}>
       {/* header of team container */}
