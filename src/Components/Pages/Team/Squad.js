@@ -3,9 +3,9 @@ import classes from "./Squad.module.css";
 import SquadItem from "./SquadItem";
 
 const Squad = ({ squad }) => {
-  //   const sortedSquad = squad.reduce((a, b) => +a.number - +b.number);
+  const sortedSquad = squad.sort((a, b) => +a.number - +b.number);
 
-  console.log(squad);
+  console.log(sortedSquad);
 
   return (
     <div className={classes.squadContainer}>
@@ -21,7 +21,7 @@ const Squad = ({ squad }) => {
           </tr>
         </thead>
         <tbody>
-          {squad.map((item) => {
+          {sortedSquad.map((item) => {
             return (
               <SquadItem
                 key={item.player.id}

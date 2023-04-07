@@ -17,7 +17,11 @@
     backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(15.5px);
     font-family: 'Archivo', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: italic;
     text-align: center;
+}
+
+.tableContent thead tr td {
+    padding: 15px;
 }

@@ -1,5 +1,7 @@
 .tableRow {
     text-align: center;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
 }
 
 .tableRow:nth-of-type(odd) {
@@ -7,4 +9,8 @@
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(15.5px);
+}
+
+.tableRow:hover {
+    background: rgb(32, 53, 119);
 }
