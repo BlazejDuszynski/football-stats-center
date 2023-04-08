@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import TeamContext from "../../Source/team-context";
 import classes from "./Match.module.css";
+import MatchResult from "./MatchResult";
 
 const Match = (props) => {
   const { teamID } = useContext(TeamContext);
@@ -36,6 +37,7 @@ const Match = (props) => {
             {props.awayName}
           </p>
         </div>
+        <MatchResult />
       </div>
     </div>
   );

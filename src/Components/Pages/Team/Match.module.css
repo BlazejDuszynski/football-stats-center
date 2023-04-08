@@ -31,10 +31,11 @@
 }
 
 .selectedTeamName {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: var(--darkerPrimary);
 }
 
 .oponentTeamName {
+    font-size: 0.9em;
     color: var(--primary);
 }
