@@ -18,6 +18,8 @@ const Matches = (props) => {
         awayName={lastMatch.teams.away.name}
         homeTeamID={lastMatch.teams.home.id}
         awayTeamID={lastMatch.teams.away.id}
+        homeTeamScore={lastMatch.scores.home_score}
+        awayTeamScore={lastMatch.scores.away_score}
       />
       <Match
         title="Next Match"
@@ -27,6 +29,8 @@ const Matches = (props) => {
         awayName={nextMatch.teams.away.name}
         homeTeamID={nextMatch.teams.home.id}
         awayTeamID={nextMatch.teams.away.id}
+        homeTeamScore={nextMatch.scores.home_score}
+        awayTeamScore={nextMatch.scores.away_score}
       />
     </div>
   );

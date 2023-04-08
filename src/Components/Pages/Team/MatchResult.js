@@ -4,9 +4,9 @@ import classes from "./MatchResult.module.css";
 const MatchResult = (props) => {
   return (
     <div className={classes.matchResultContainer}>
-      <p>2</p>
+      <p>{props.homeTeamScore}</p>
       <p>WIN</p>
-      <p>0</p>
+      <p>{props.awayTeamScore}</p>
     </div>
   );
 };

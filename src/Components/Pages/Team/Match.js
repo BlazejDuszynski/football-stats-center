@@ -6,8 +6,6 @@ import MatchResult from "./MatchResult";
 const Match = (props) => {
   const { teamID } = useContext(TeamContext);
 
-  console.log(teamID);
-  console.log(props.awayTeamID);
   return (
     <div className={classes.match}>
       <header className={classes.header}>{props.title}</header>
@@ -37,7 +35,10 @@ const Match = (props) => {
             {props.awayName}
           </p>
         </div>
-        <MatchResult />
+        <MatchResult
+          homeTeamScore={props.homeTeamScore}
+          awayTeamScore={props.awayTeamScore}
+        />
       </div>
     </div>
   );
